@@ -1,0 +1,83 @@
+.flexsearch__wrapper 
+    height: auto
+    width: auto
+    max-width: 250px
+    overflow: hidden
+    background: transparent
+    margin: 0
+    position: static
+
+
+.flexsearch__form 
+    overflow: hidden    
+
+.searchbar 
+    position: relative
+    max-width: 270px
+
+.flexsearch__input_wrapper 
+    padding: 0 66px 0 0 /* Right padding for submit button width */
+    overflow: hidden
+    position: relative
+
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+// .flexsearch {
+//   padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+// }
+
+.flexsearch__input 
+    -webkit-box-sizing: content-box
+    -moz-box-sizing: content-box
+    box-sizing: content-box
+    width: 200px
+    height: 40px
+    padding: 0 46px 0 10px
+    // border-color: #888
+    border-radius: 35px /* (height/2) + border-width */
+    border-style: none
+    color: #8B92A2
+    font-weight: 600
+    padding: 0 15px
+    background-color: #2E333F
+    // margin-top: 15px;
+    color: #cecece
+    box-shadow: 0 3px 3px rgba(24, 24, 24, 8%) inset
+    // font-family: 'Helvetica', sans-serif;
+    // font-size: 26px;
+    -webkit-appearance: none
+    -moz-appearance: none
+
+
+.flexsearch__submit 
+    position: absolute
+    right: 0
+    top: 0
+    display: block
+    // width: 60px
+    // height: 60px
+    padding: 0
+    border: none
+    margin-top: 12px /* margin-top + border-width */
+    margin-right: 55px /* border-width */
+    background: transparent
+    color: #888
+    // font-family: 'Helvetica', sans-serif;
+    // font-size: 40px;
+    // line-height: 36px;
+
+
+.flexsearch__input:focus 
+    outline: none
+    border-color: #333
+
+
+.flexsearch__input:focus.flexsearch__submit 
+    color: #333
+
+
+.flexsearch__submit:hover 
+    color: #333
+    cursor: pointer

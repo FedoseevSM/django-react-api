@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  nginx:
+    restart: unless-stopped
+    build:
+      context: ../
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - static_volume:/app/backend/django_static
+      - ./nginx/development:/etc/nginx/conf.d
+    depends_on:
+      - backend
+  backend:
+    restart: unless-stopped
+    build:
+      context: ../
+      dockerfile: ./docker/backend/Dockerfile
+    entrypoint: /app/docker/backend/wsgi-entrypoint.sh
+    volumes:
+      - static_volume:/app/backend/django_static
+    expose:
+      - 8000
+    ports:
+      - 8000:80
+
+volumes:
+  static_volume: {}
